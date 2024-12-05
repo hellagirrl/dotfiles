@@ -91,6 +91,13 @@ sketchybar --add item clock right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change
 
+sketchybar --add item language right \
+           --set language update_freq=1 \
+                 script="$PLUGIN_DIR/language.sh" \
+                 icon.font="Hack Nerd Font:Bold:14.0" \
+                 icon.color=0xffffffff \
+           --subscribe language input_source_change
+
 ##### Force all scripts to run the first time (never do this in a script) #####
 
 sketchybar --hotload true
